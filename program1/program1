@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Text style</title>
+</head>
+<body>
+<h1 align ="center"> <mark>Text style</h1>
+<p>
+<u><i><b>HTML(Hyper text markup language)</b></i></u>is the most basic building block of the web</p><br>
+<p>
+it define the <u> meaning and structure of the web content</u> other technology beside HTML are genarally used to describe a web pages presentation 
+<b>(css)</b>or functionality behaviour <b> (javascript) </b></p> <br>
+<p>
+<b>BOLD</b>the <b>"b"tag </b>is used to make text <b>bold</b></p><br>
+<p><b>Italics </b>the <b>"i"tag</b> is used to show text in <i>Italics</i></p><br>
+<p><b>Underline </b>The <b>"u"tag</b>is used to <u>underline</u> text</p><br>
+<p><b>paragraph</b>The <b>"p"tag </b> is used to create paragraph</p>
+</body>
+</html> 

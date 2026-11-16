@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html> <head> <title>Form Validation</title>
+
+<style>
+    body {
+        background-color: blue;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    label {
+        display: inline-block;
+        width: 140px;
+        text-align: left;
+        margin: 5px;
+    }
+
+    input {
+        padding: 8px;
+        margin: 3px;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin: 10px 5px;
+        cursor: pointer;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<h1>FORM VALIDATION</h1>
+
+<form id="myForm" onsubmit="return validateform()">
+
+    <label for="name">NAME:</label>
+    <input type="text" id="name"><br>
+
+    <label for="email">EMAIL:</label>
+    <input type="text" id="email"><br>
+
+    <label for="mobile">MOBILE NUMBER:</label>
+    <input type="text" id="mobile"><br>
+
+    <label for="username">USER NAME:</label>
+    <input type="text" id="username"><br>
+
+    <label for="password">PASSWORD:</label>
+    <input type="password" id="password"><br>
+
+    <button type="reset">RESET</button>
+    <button type="submit">SUBMIT</button>
+
+</form>
+
+<script>
+    function validateform() {
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let mobile = document.getElementById("mobile").value.trim();
+        let username = document.getElementById("username").value.trim();
+        let password = document.getElementById("password").value;
+
+        // Check empty fields
+        if (name === "" || email === "" || mobile === "" ||
+            username === "" || password === "") {
+
+            alert("Please fill all fields!");
+            return false;
+        }
+
+        // Check email
+        if (!email.includes("@") || !email.includes(".")) {
+            alert("Please enter a valid email!");
+            return false;
+        }
+
+        // Check mobile number
+        if (!/^[0-9]{10}$/.test(mobile)) {
+            alert("Please enter a valid 10 digit mobile number!");
+            return false;
+        }
+
+        // Check password
+        if (password.length < 6) {
+            alert("Password must contain at least 6 characters!");
+            return false;
+        }
+
+        // Success message
+        alert("Form submitted successfully!");
+
+        return false;
+    }
+</script>
+
+
+</body> </html>
